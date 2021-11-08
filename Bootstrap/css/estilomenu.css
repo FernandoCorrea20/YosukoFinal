@@ -1,0 +1,132 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    min-height: 100vh;
+    background: url(../img/imgFondo.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.login-box{
+
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(255, 123, 0);
+    background:rgb(226, 134, 101);
+    color:#fff;
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding: 80px 10px;
+    min-width: 280px;
+}
+.login-box h2{
+    margin: 0;
+    padding:0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Merriweather Sans', sans-serif;;
+    margin-bottom:20px ;
+    color:rgb(241, 226, 14);
+
+}
+.login-box h4{
+
+    text-align: center;
+    font-size: 20px;
+    margin-bottom:60px ;
+    font-weight: bold;
+    font-family: 'Merriweather Sans', sans-serif;;
+    color:rgb(241, 226, 14);
+
+}
+.login-box label{
+    margin:0;
+    padding: 0;
+    font-weight: bold;
+    display:block;
+    color:rgb(241, 226, 14);
+}
+
+.login-box button{
+    margin-top: 30px;
+    margin-top: 30px;
+}
+.login-box .avatar{
+
+    width: 120px;
+    height: 100px;
+    border-radius:50%;
+    position: absolute;
+    top:-50px;
+    left: calc(50% - 60px);
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(255, 123, 0);
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.btn-menu{
+    display: block;
+    padding: 20px;
+    background: orange;
+    
+}
+.btn-menu .icono{
+
+}
+.contenedormenu{
+    width: 100%;
+    min-width: 280px;
+    display: inline-block;
+}
+.contenedormenu .menu{
+    width: 100%;
+    display: none;
+}
+.contenedormenu ul{
+    list-style: none;
+    padding-left: 0%;
+}
+.contenedormenu .menu li{
+    color: #494949;
+    display: block;
+    padding: 10px 0px;
+    background: orange;
+    
+}
+.contenedormenu .menu li:hover{
+    background: rgb(250, 184, 2);
+}
+.contenedormenu .menu .icono{
+    font-size: 15px;
+    line-height: 16px;
+}
+.contenedormenu .menu .icono.izq{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.contenedormenu .menu .icono.der{
+    float: right;
+    margin-right: 15px;
+} 
+.contenedormenu .menu ul{
+    display: none;
+}
+.contenedormenu .menu ul li{
+    background: rgb(250, 202, 113);
+    text-align: center;
+}
+.contenedormenu .menu .activado >a{
+    background: orangered;
+}

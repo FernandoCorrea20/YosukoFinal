@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+ 
+    
+</head>
+<body  id="cuerpo">
+
+    <head>
+        
+        <div class= "w-75 mx-auto row" id="cabecera">
+            
+            <div class="col-sm "><h1 class="font-weight-bold">Yosuko Delivery</h1></div>
+            
+            
+        </div>
+        <div class= "w-75 mx-auto row" id="cabecera2">
+            <div class="col-sm ">Pizzas - empanadas - bebidas</div>
+        </div>
+    </head>
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <!-- 
+        
+        Alinear al centro: mx-auto
+        Anchura: W- * ( .w-25, .w-50, .w-75, .w-100, .mw-100)
+        Altura: h- * ( .h-25, .h-50, .h-75, .h-100, .mh-100)
+        Alinear Texto: text-center
+     -->
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <header class="w-75 mx-auto">
+        <div class= "row">
+            <div class="col-sm ">
+            
+                <nav class=" navbar navbar-expand-sm bg-dark navbar-dark  ">
+                    <a class="navbar-brand" href="#">
+                        <img src="../Bootstrap/img/pizza1.png" alt="Logo" style="width:40px;">
+                      </a>
+
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">¿Quienes Somos?</a>
+                    </li>
+                
+                    <!-- Dropdown -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php#" >Ingresar</a>
+                    </li>
+                    </ul>
+                </nav> 
+
+            </div>
+        </div>
+    </header>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <div class="container-fluid w-75 "   >
+
+
+        <!-- ------------------Creo una columna que para el formulario----------------------------- -->
+        
+        <div class= "row" >
+            <div   class="col-xl bg-info text-center "> 
+                <!-- -------------------------------------------------------------------------------------- -->
+
+                 <h2 class="font-weight-bold"> Registro de Usuario </h2  >
+                    <br>
+
+                </div>     
+   
+            </div>  
+
+            
+
+
+
+
+            
+            
+            <div class= "row" >
+                <div   class="col-xl bg-info text-center "> 
+                    <!-- -------------------------------------------------------------------------------------- -->
+    
+                    <div >
+
+
+                        <center><form   action="../Ajax/usuarioAjax.php" name="formulario" method="post"  >
+
+                        
+                            <div class="form-group">
+                            <label for="nombre" class="col-sm-1 col-form-label ">Nombre:</label>
+                            <div class="col-sm-3 ">
+                            <input type="text" class="form-control form-control-sm" id="nombre" name="nombre">
+                            </div>
+                            </div>
+    
+                            <!-- -------------------------------------------------------------------------------------- -->    
+                            <div class="form-group ">
+                                <label for="apellido" class="col-sm-1 col-form-label">Apellido:</label>
+                                <div class="col-sm-3">
+                                <input type="text" class="form-control form-control-sm" id="apellido" name="apellido">
+                                </div>
+                            </div>
+    
+                            <!-- -------------------------------------------------------------------------------------- -->    
+                            <div class="form-group ">
+                                <label for="direccion" class="col-sm-1 col-form-label">D.N.I.:</label>
+                                <div class="col-sm-3">
+                                <input type="text" class="form-control form-control-sm" id="direccion" name="dni" >
+                                </div>
+                            </div>  
+    
+                            <!-- -------------------------------------------------------------------------------------- -->
+
+                            <div class="form-group ">
+                                <label for="direccion" class="col-sm-1 col-form-label">CUILT/CUIT:</label>
+                                <div class="col-sm-3">
+                                <input type="text" class="form-control form-control-sm" id="direccion" name="cuil" >
+                                </div>
+                            </div>  
+
+                            <!-- -------------------------------------------------------------------------------------- -->  
+
+                            <div class="form-group ">
+                                <label for="telefono" class="col-sm-1 col-form-label">Teléfono:</label>
+                                <div class="col-sm-3">
+                                <input type="tel" class="form-control form-control-sm" id="telefono" name="tel">
+                                </div>
+                            </div>  
+    
+                            <!-- -------------------------------------------------------------------------------------- -->    
+
+                            <div class="form-group ">
+                                <label for="email" class="col-sm-1 col-form-label">Email:</label>
+                                <div class="col-sm-3">
+                                <input type="text" class="form-control form-control-sm" id="email" name="email" >
+                                </div>
+                            </div> 
+
+                            <!-- -------------------------------------------------------------------------------------- -->
+                                                     
+                            <div class="form-group ">
+                                <label for="numerodoc" class="col-lg-1 col-form-label">Dirección:</label>
+                                <div class="col-sm-3">
+                                <input type="text" class="form-control form-control-sm" id="numerodoc" name="direccion" >
+                                </div>
+                            </div>    
+    
+                            <!-- -------------------------------------------------------------------------------------- -->
+
+                            <div class="form-group ">
+                                <label for="cargo" class="col-sm-1 col-form-label">Cargo: </label>
+                                <div class="col-sm-3">
+                                <select class="form-control form-control-sm" id="cargo" name="cargo">
+                                    <option value="Vendedor">Vendedor</option>
+                                    <option value="Responsable de Cocina">Responsable de Cocina</option>
+                                    <option value="Despachante">Despachante</option>
+                                    <option value="Responsable de la pizzeria">Responsable de la pizzeria</option>
+                                    <option value="Moto Mandados">Moto Mandados</option>
+                                </select>
+                                </div>
+                            </div>
+    
+                            <hr>
+
+                            <!-- -------------------------------------------------------------------------------------- -->    
+
+                            <div class="form-group ">
+                                <label for="usuario" class="col-sm-1 col-form-label">Usuario:</label>
+                                <div class="col-sm-3">
+                                <input type="text" class="form-control form-control-sm" id="usuario" name="usuario">
+                                </div>
+                            </div> 
+
+                            <!-- -------------------------------------------------------------------------------------- --> 
+    
+                            <div class="form-group ">
+                                <label for="contraseña1" class="col-sm-1 col-form-label">Contraseña:</label>
+                                <div class="col-sm-3">
+                                <input type="password" class="form-control form-control-sm" id="contraseña1" name="contraseña1">
+                                </div>
+                            </div> 
+
+                            <!-- -------------------------------------------------------------------------------------- --> 
+
+                            <div class="form-group ">
+                                <label for="contraseña2" class="col-sm-1 col-form-label">Confirmar contraseña:</label>
+                                <div class="col-sm-3">
+                                <input type="password" class="form-control form-control-sm" id="contraseña2" name="contraseña2">
+                                </div>
+                            </div> 
+
+                            <!-- -------------------------------------------------------------------------------------- -->
+
+                            <div class="form-group ">
+                                <label for="fechaIngreso" class="col-sm-1 col-form-label">Fecha de Ingreso:</label>
+                                <div class="col-sm-3">
+                                <input type="date" class="form-control form-control-sm" id="contraseña2" name="fechaIngreso">
+                                </div>
+                            </div> 
+
+                            <!-- -------------------------------------------------------------------------------------- -->
+                            <!--
+                            <div class="form-group">
+                                <label for="sel1">Estado del Usuario</label>
+                                <select class="form-control col-sm-1" id="sel1">
+                                  <option>Activo</option>
+                                  <option>Inactivo</option>
+                                </select>
+                              </div> 
+                              -->
+
+                            <div class="form-group ">
+                                <label for="estado" class="col-sm-1 col-form-label">Estado:</label>
+                                <div class="col-sm-3">
+                                <input type="number" class="form-control form-control-sm" id="contraseña2" name="estado">
+                                </div>
+                            </div> 
+
+
+    
+                            <br>
+    
+                            <button type="submit" class="btn btn-primary btn-sm btn-dark">Cargar Datos</button>
+                            <button type="reset" class="btn btn-primary btn-sm btn-dark">Limpiar</button>
+                            
+                            
+                        </form></center>
+
+                        <br>
+                        <br>
+
+
+
+
+
+
+                    </div>
+    
+    
+    
+    
+                        
+                </div>     
+                            
+    
+            </div>  
+            
+
+
+
+
+
+
+
+                    <!-- ---------------------------------------------------------- -->
+                    <script src="js/jquery-3.5.1.min.js" ></script>
+                    <script src="js/popper.min.js" ></script>
+                    <script src="js/bootstrap.min.js" ></script>
+
+                    <!-- ---------------------------------------------------------- -->
+            
+            <footer> 
+
+            <div class= "row" id="cabecera2">
+            
+
+                <div class="col-xl "><h4 class="font-weight-bold">Contactos</h4></div>
+                
+                        
+
+            </div>
+
+
+        </footer>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

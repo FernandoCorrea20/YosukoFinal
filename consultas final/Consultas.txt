@@ -1,0 +1,98 @@
+//conectar y relizar consultas por consola
+
+mysql -h nombre_servidor -u nombre_usuario -p
+
+mysql -h localhost -u root -p
+
+mysql> use mibasedatos;
+
+mysql> show databases 
+
+mysql> show tables;
+
+//------------------------------------------------------------------------------
+
+
+
+ALTER TABLE nombre_tabla RENAME nombre_nuevo_tabla;
+
+ALTER TABLE nombre_tabla DROP COLUMN nombre_columna;
+
+#Eliminar clave primaria
+ALTER TABLE nombre_tabla DROP PRIMARY KEY;
+#Eliminar clave externa
+ALTER TABLE nombre_tabla DROP FOREIGN KEY nombre_columna;
+
+ALTER TABLE nombre_tabla ADD fecha_nacimiento date;
+
+ALTER TABLE nombre_tabla ADD nombre_columna VARCHAR(5) AFTER nombre_columna_anterior;
+
+
+ALTER TABLE nombre_tabla ADD nombre_columna VARCHAR(5) INT FIRST;
+
+
+Cambiar el nombre o renombrar una columna:
+
+ALTER TABLE nombre_tabla CHANGE nombre_viejo_columna nombre_nuevo_columna;
+
+        
+
+
+Cambiar el nombre y tipo de dato de una columna:
+
+ALTER TABLE nombre_tabla CHANGE nombre_viejo_columna nombre_nuevo_columna VARCHAR(20);
+
+        
+
+
+Solamente cambiar el tipo de dato de una columna:
+
+ALTER TABLE nombre_tabla MODIFY nombre_columna DATE NOT NULL;
+
+
+//............................................................................
+
+// lista de productos por debajo del precio maximo
+
+SELECT nombre from producto where precio_venta < (SELECT MAX(precio_venta) FROM producto) 
+
+
+// lista de productos mayor a la media
+
+SELECT nombre from producto where precio_venta > (SELECT AVG(precio_venta) FROM producto) 
+
+
+
+
+//Trae los nombres de los clientes entre fechas
+
+SELECT nombres from clientes where fechaRegistro BETWEEN '2021-07-19' AND '2021-07-29' 
+
+
+//Trae de varias tablas los campos requeridos usando inner join
+
+SELECT d.id_detalle,c.nombres, p.nombre, d.cantidad, d.subtotal, p.precio_venta
+        FROM detalleventas d
+        INNER JOIN producto p ON d.id_producto = p.id_producto
+        INNER JOIN pedidos pe on d.id_pedidos = pe.id_pedidos
+        INNER JOIN clientes c on pe.id_cliente = c.id_cliente
+        WHERE 
+        d.id_pedidos = 69
+        order by d.subtotal DESC;
+
+
+
+//Insertar datos
+
+INSERT INTO pedidos(id_pedidos, id_usuario, fecha_venta, estado, id_cliente,total) VALUES (63,2,'2021-07-23','pagado',3,2400);
+
+
+//Procedimiento alamcenado
+
+CREATE PROCEDURE actualizar_precio(precio decimal(10,0), ID int)
+update producto set precio_venta=precio where id_producto = ID;
+
+
+//llamar al procedimiento
+
+CALL `actualizar_precio`(350, 10); 

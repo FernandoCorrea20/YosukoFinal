@@ -1,0 +1,28 @@
+
+#cabecera {
+    margin-top:10%;
+    background: orangered;
+    color: yellow;
+    
+    text-align: center ;
+    
+}
+
+#cabecera2 {
+
+    background: orangered;
+    color: whitesmoke;
+    border-bottom: 1px solid black;
+    text-align: center ;
+    
+}
+
+#cuerpo {
+
+    background: url(pizza-4968645_960_720.webp);
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+
+}
